@@ -54,12 +54,19 @@ public class Pedido extends Base{
 
 	@Override
 	public String toString() {
-		return "Pedido: " + getCodigo() + "\n" +
-			   "Incluido em: " + getDataHoraInclusao() + "\n" +
-			   "Alterado em: " + getDataHoraAlteracao() + "\n" +
-			   "Nome do Cliente: " + nomeCliente + "\n" +
-			   "Nome da Filial: " + nomeFilial + "\n" + "\n" + 
-				itens + "\n";				
+		return getCodigo() + "," + getDataHoraInclusao() + "," + nomeCliente + "," + nomeFilial + "," + itens + "\n";
 	}
+
+	//@Override
+	//public String toString() {
+	//	return "Pedido: " + getCodigo() + "\n" +
+	//		   "Incluido em: " + getDataHoraInclusao() + "\n" +
+	//		   "Alterado em: " + getDataHoraAlteracao() + "\n" +
+	//		   "Nome do Cliente: " + nomeCliente + "\n" +
+	//		   "Nome da Filial: " + nomeFilial + ";\n" + "\n" + 
+	//			itens + "\n";				
+	//}
+	
+	
 	
 }

@@ -2,7 +2,7 @@ package model;
 
 public class Item extends Pedido{
     
-	private int codItem;
+	private String codItem;
 	private String descricaoItem;
 	private int quantItem;		
 	private Double valorItem;
@@ -12,7 +12,7 @@ public class Item extends Pedido{
 		
 	}
 
-	public Item(int codItem, String descricaoItem, int quantItem, Double valorItem) {
+	public Item(String codItem, String descricaoItem, int quantItem, Double valorItem) {
 		super();
 		this.codItem = codItem;
 		this.descricaoItem = descricaoItem;
@@ -20,11 +20,11 @@ public class Item extends Pedido{
 		this.valorItem = valorItem;
 	}
 
-	public int getCodItem() {
+	public String getCodItem() {
 		return codItem;
 	}
 
-	public void setCodItem(int codItem) {
+	public void setCodItem(String codItem) {
 		this.codItem = codItem;
 	}
 
@@ -54,11 +54,17 @@ public class Item extends Pedido{
 
 	@Override
 	public String toString() {
-		return  "Item: " + codItem + "\n" + 
-				"  Descrição Item: " + descricaoItem + "\n" + 
-				"  Quantidade: " + quantItem + "\n" +
-				"  Valor Item=" + valorItem + "\n";
-				
-	}	
+		return codItem + "," + descricaoItem + "," + quantItem + "," + valorItem; 
+	}
+
+	
+	
+	//@Override
+	//public String toString() {
+	//	return  "Item: " + codItem + "\n" + 
+	//			"  Descrição Item: " + descricaoItem + "\n" + 
+	//			"  Quantidade: " + quantItem + "\n" +
+	//			"  Valor Item=" + valorItem + "\n";				
+	//}	
 	
 }
